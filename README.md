@@ -1,6 +1,28 @@
 # 🏠 House Price Prediction
 
+**Author:** Souraneel Biswas
+
 A full-stack ML web application that predicts residential house prices using a trained scikit-learn model, served via a **FastAPI** backend and a **Streamlit** frontend.
+
+---
+
+## Dataset
+
+- **File:** `house_price_regression_dataset.csv`
+- **Rows:** 1,000 | **Columns:** 8 (7 features + 1 target)
+- **Source:** Synthetic dataset generated for academic regression demonstration
+- **Target variable:** `House_Price` (continuous, USD)
+
+---
+
+## Submission Files
+
+| File | Description |
+|---|---|
+| `SouraneelBiswas_HousePriceRegression.ipynb` | Complete project code in Jupyter Notebook format |
+| `requirements.txt` | Python library dependencies |
+| `SouraneelBiswas_ProjectReport.docx` | Full project report (Microsoft Word) |
+| `README.md` | Project overview, setup, and run instructions |
 
 ---
 
@@ -8,16 +30,19 @@ A full-stack ML web application that predicts residential house prices using a t
 
 ```
 House_Price_Regression/
-├── house_price_regression_dataset.csv   # Training dataset (1,000 rows)
-├── train_model.py                       # Model training script
-├── app.py                               # FastAPI backend
-├── frontend.py                          # Streamlit frontend
-├── requirements.txt                     # Python dependencies
+├── SouraneelBiswas_HousePriceRegression.ipynb  # Jupyter Notebook (submission)
+├── SouraneelBiswas_ProjectReport.docx          # Project report (submission)
+├── house_price_regression_dataset.csv          # Training dataset (1,000 rows)
+├── train_model.py                              # Model training script
+├── app.py                                      # FastAPI backend
+├── frontend.py                                 # Streamlit frontend
+├── requirements.txt                            # Python dependencies
+├── README.md                                   # This file
 ├── model/
-│   ├── model.pkl                        # Saved trained model
-│   └── meta.json                        # Feature stats & metrics
+│   ├── model.pkl                               # Saved trained model
+│   └── meta.json                               # Feature stats & metrics
 └── plots/
-    └── feature_importance.png           # Feature importance chart
+    └── feature_importance.png                  # Feature importance chart
 ```
 
 ---
