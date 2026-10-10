@@ -109,10 +109,8 @@ print(f"Model saved -> {MODEL_DIR}/model.pkl")
 print(f"Meta  saved -> {MODEL_DIR}/meta.json")
 
 # ── Plot: Feature Importance ──────────────────────────────────────────────────
-if hasattr(best_model, "feature_importances_"):
-    importances = best_model.feature_importances_
-else:
-    importances = best_model.named_steps["model"].coef_
+inner = best_model.named_steps["model"] if hasattr(best_model, "named_steps") else best_model
+importances = inner.feature_importances_ if hasattr(inner, "feature_importances_") else inner.coef_
 
 fig, ax = plt.subplots(figsize=(8, 5))
 sorted_idx = np.argsort(importances)[::-1]

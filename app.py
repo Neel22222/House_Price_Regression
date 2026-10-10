@@ -48,7 +48,7 @@ app.add_middleware(
 class HouseFeatures(BaseModel):
     Square_Footage:       float = Field(..., gt=0,  description="Total square footage of the house")
     Num_Bedrooms:         int   = Field(..., ge=1,  le=10, description="Number of bedrooms")
-    Num_Bathrooms:        int   = Field(..., ge=1,  le=10, description="Number of bathrooms")
+    Num_Bathrooms:        int   = Field(..., ge=1,  le=3,  description="Number of bathrooms")
     Year_Built:           int   = Field(..., ge=1800, le=2024, description="Year the house was built")
     Lot_Size:             float = Field(..., gt=0,  description="Lot size in acres")
     Garage_Size:          int   = Field(..., ge=0,  le=5,  description="Garage capacity (cars)")
